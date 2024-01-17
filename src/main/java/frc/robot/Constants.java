@@ -2,6 +2,7 @@ package frc.robot;
 
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
+import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
 
 public class Constants {
@@ -78,6 +79,22 @@ public class Constants {
         public static final int DRIVER_ROTATE_AXIS = 4;
         public static final int DRIVER_FIELD_CENTRIC_BUTTON = 1;
         public static final double DEADBAND = 0.05;
+    }
+
+    public static final class AutoConstants {
+        public static final double MAX_SPEED_METERS_PER_SECOND = DriveConstants.PHYSICAL_MAX_SPEED_METERS_PER_SECOND / 4;
+        public static final double MAX_ANGULAR_SPEED_RADIANS_PER_SECOND =
+                DriveConstants.PHYSICAL_MAX_ANGULAR_SPEED_RADIANS_PER_SECOND / 10;
+        public static final double MAX_ACCELERATION_METERS_PER_SECOND_SQUARED = 3;
+        public static final double MAX_ANGULAR_ACCELERATION_RADIANS_PER_SECOND_SQUARED = Math.PI / 4;
+        public static final double PX_CONTROLLER = 1.5;
+        public static final double PY_CONTROLLER = 1.5;
+        public static final double P_THETA_CONTROLLER = 3;
+
+        public static final TrapezoidProfile.Constraints THETA_CONTROLLER_CONSTRAINTS = //
+                new TrapezoidProfile.Constraints(
+                        MAX_ANGULAR_SPEED_RADIANS_PER_SECOND,
+                        MAX_ANGULAR_ACCELERATION_RADIANS_PER_SECOND_SQUARED);
     }
 
 }
