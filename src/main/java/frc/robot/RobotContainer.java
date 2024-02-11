@@ -67,9 +67,9 @@ public class RobotContainer {
         );
 
         // 3. Define PID controllers for tracking trajectory
-      SwerveControllerCommand command = getSwerveControllerCommand(trajectory);
+        SwerveControllerCommand command = getSwerveControllerCommand(trajectory);
 
-      // 5. Add some init and wrap-up logic
+        // 5. Add some init and wrap-up logic
         return new SequentialCommandGroup(
                 new InstantCommand(() -> swerveSubsystem.resetOdometry(trajectory.getInitialPose()), swerveSubsystem),
                 command,

@@ -55,7 +55,7 @@ public class SwerveSubsystem extends SubsystemBase {
             BACK_RIGHT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD
     );
 
-    private AHRS gyro = new AHRS(SPI.Port.kMXP);
+    private final AHRS gyro = new AHRS(SPI.Port.kMXP);
     private final SwerveDriveOdometry odometer =
             new SwerveDriveOdometry(DRIVE_KINEMATICS, new Rotation2d(0),
                     new SwerveModulePosition[]{
@@ -65,6 +65,7 @@ public class SwerveSubsystem extends SubsystemBase {
             );
 
     public SwerveSubsystem() {
+        gyro.enableLogging(true);
         new Thread(() -> {
             try {
                 Thread.sleep(1000);

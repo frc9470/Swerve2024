@@ -20,48 +20,48 @@ public class Constants {
 
     public static final class DriveConstants {
 
-        public static final double TRACK_WIDTH_METERS = Units.inchesToMeters(21);
-        public static final double WHEEL_BASE_METERS = Units.inchesToMeters(25.5);
+        public static final double TRACK_WIDTH_METERS = Units.inchesToMeters(24.75);
+        public static final double WHEEL_BASE_METERS = Units.inchesToMeters(24.75);
         public static final SwerveDriveKinematics DRIVE_KINEMATICS = new SwerveDriveKinematics(
                 new Translation2d(WHEEL_BASE_METERS / 2, -TRACK_WIDTH_METERS / 2),
                 new Translation2d(WHEEL_BASE_METERS / 2, TRACK_WIDTH_METERS / 2),
                 new Translation2d(-WHEEL_BASE_METERS / 2, -TRACK_WIDTH_METERS / 2),
                 new Translation2d(-WHEEL_BASE_METERS / 2, TRACK_WIDTH_METERS / 2));
 
-        public static final int FRONT_LEFT_DRIVE_MOTOR_PORT = 8;
-        public static final int BACK_LEFT_DRIVE_MOTOR_PORT = 2;
-        public static final int FRONT_RIGHT_DRIVE_MOTOR_PORT = 6;
-        public static final int BACK_RIGHT_DRIVE_MOTOR_PORT = 4;
+        public static final int FRONT_LEFT_DRIVE_MOTOR_PORT = 9;
+        public static final int BACK_LEFT_DRIVE_MOTOR_PORT = 7;
+        public static final int FRONT_RIGHT_DRIVE_MOTOR_PORT = 3;
+        public static final int BACK_RIGHT_DRIVE_MOTOR_PORT = 5;
 
-        public static final int FRONT_LEFT_TURNING_MOTOR_PORT = 7;
-        public static final int BACK_LEFT_TURNING_MOTOR_PORT = 1;
-        public static final int FRONT_RIGHT_TURNING_MOTOR_PORT = 5;
-        public static final int BACK_RIGHT_TURNING_MOTOR_PORT = 3;
+        public static final int FRONT_LEFT_TURNING_MOTOR_PORT = 8;
+        public static final int BACK_LEFT_TURNING_MOTOR_PORT = 6;
+        public static final int FRONT_RIGHT_TURNING_MOTOR_PORT = 2;
+        public static final int BACK_RIGHT_TURNING_MOTOR_PORT = 4;
 
-        public static final boolean FRONT_LEFT_TURNING_ENCODER_REVERSED = true;
-        public static final boolean BACK_LEFT_TURNING_ENCODER_REVERSED = true;
-        public static final boolean FRONT_RIGHT_TURNING_ENCODER_REVERSED = true;
-        public static final boolean BACK_RIGHT_TURNING_ENCODER_REVERSED = true;
+        public static final boolean FRONT_LEFT_TURNING_ENCODER_REVERSED = false;
+        public static final boolean BACK_LEFT_TURNING_ENCODER_REVERSED = false;
+        public static final boolean FRONT_RIGHT_TURNING_ENCODER_REVERSED = false;
+        public static final boolean BACK_RIGHT_TURNING_ENCODER_REVERSED = false;
 
         public static final boolean FRONT_LEFT_DRIVE_ENCODER_REVERSED = true;
         public static final boolean BACK_LEFT_DRIVE_ENCODER_REVERSED = true;
-        public static final boolean FRONT_RIGHT_DRIVE_ENCODER_REVERSED = false;
-        public static final boolean BACK_RIGHT_DRIVE_ENCODER_REVERSED = false;
+        public static final boolean FRONT_RIGHT_DRIVE_ENCODER_REVERSED = true;
+        public static final boolean BACK_RIGHT_DRIVE_ENCODER_REVERSED = true;
 
-        public static final int FRONT_LEFT_DRIVE_ABSOLUTE_ENCODER_PORT = 0;
-        public static final int BACK_LEFT_DRIVE_ABSOLUTE_ENCODER_PORT = 2;
-        public static final int FRONT_RIGHT_DRIVE_ABSOLUTE_ENCODER_PORT = 1;
-        public static final int BACK_RIGHT_DRIVE_ABSOLUTE_ENCODER_PORT = 3;
+        public static final int FRONT_LEFT_DRIVE_ABSOLUTE_ENCODER_PORT = 13;
+        public static final int BACK_LEFT_DRIVE_ABSOLUTE_ENCODER_PORT = 12;
+        public static final int FRONT_RIGHT_DRIVE_ABSOLUTE_ENCODER_PORT = 10;
+        public static final int BACK_RIGHT_DRIVE_ABSOLUTE_ENCODER_PORT = 11;
 
         public static final boolean FRONT_LEFT_DRIVE_ABSOLUTE_ENCODER_REVERSED = false;
         public static final boolean BACK_LEFT_DRIVE_ABSOLUTE_ENCODER_REVERSED = false;
         public static final boolean FRONT_RIGHT_DRIVE_ABSOLUTE_ENCODER_REVERSED = false;
         public static final boolean BACK_RIGHT_DRIVE_ABSOLUTE_ENCODER_REVERSED = false;
 
-        public static final double FRONT_LEFT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = -0.254;
-        public static final double BACK_LEFT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = -1.252;
-        public static final double FRONT_RIGHT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = -1.816;
-        public static final double BACK_RIGHT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = -4.811;
+        public static final double FRONT_LEFT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = -0.230713;
+        public static final double BACK_LEFT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = 0.177490;
+        public static final double FRONT_RIGHT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = -0.001221;
+        public static final double BACK_RIGHT_DRIVE_ABSOLUTE_ENCODER_OFFSET_RAD = 0.472900;
 
         public static final double PHYSICAL_MAX_SPEED_METERS_PER_SECOND = 5;
         public static final double PHYSICAL_MAX_ANGULAR_SPEED_RADIANS_PER_SECOND = 2 * 2 * Math.PI;
